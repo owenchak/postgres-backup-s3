@@ -1,5 +1,4 @@
-ARG ALPINE_VERSION
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.16.2
 ARG TARGETARCH
 
 ADD src/install.sh install.sh
@@ -24,6 +23,5 @@ ENV BACKUP_KEEP_DAYS ''
 
 ADD src/run.sh run.sh
 ADD src/backup.sh backup.sh
-ADD src/restore.sh restore.sh
 
 CMD ["sh", "run.sh"]
