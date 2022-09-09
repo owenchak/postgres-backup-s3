@@ -79,7 +79,7 @@ else
 fi
 
 echo "Uploading backup to $S3_BUCKET..."
-aws $aws_args s3 cp "$local_file" "$s3_uri"
+aws $aws_args s3 cp "$local_file" "$s3_uri --cli-connect-timeout 6000"
 rm "$local_file"
 
 echo "Backup complete."
