@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM postgres:15-alpine
 ARG TARGETARCH
 
 ADD src/install.sh install.sh
